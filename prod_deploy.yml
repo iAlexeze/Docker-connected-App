@@ -20,7 +20,7 @@ spec:
       imagePullSecrets:
       - name: prod-sec
       containers:
-      - image: ialexeze/connect:v1
+      - image: connect:v1
         name: prod
         ports:
         - containerPort: 5000
