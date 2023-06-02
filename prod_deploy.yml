@@ -3,8 +3,8 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: ialexdev
-  name: ialexdev
+    app: connect
+  name: connect-app
 spec:
   replicas: 3
   selector:
