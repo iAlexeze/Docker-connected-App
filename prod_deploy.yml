@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: ialexdev
+  name: ialexdev
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: prod
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: prod
+    spec:
+      imagePullSecrets:
+      - name: prod-sec
+      containers:
+      - image: ialexeze/prod:v1
+        name: prod
+        ports:
+        - containerPort: 5000
+        resources: {}
+status: {}
